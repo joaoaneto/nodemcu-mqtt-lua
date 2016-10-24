@@ -1,9 +1,9 @@
 local module = {}  
 m = nil
-
+dofile("dht_11.lua")
 -- Sends a simple ping to the broker
 local function send_ping()  
-    m:publish(config.ENDPOINT .. "ping","id=" .. config.ID,0,0)
+    m:publish(config.ENDPOINT .. "ping","id=" .. getTemp(),0,0)
 end
 
 -- Sends my id to the broker for registration
